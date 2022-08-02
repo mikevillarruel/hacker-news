@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePosts } from '../hooks/usePosts';
 import { Post } from '../interfaces/Post';
 import { FavesPicker } from './FavesPicker';
@@ -9,7 +9,7 @@ import './PostList.css';
 
 export const PostList = () => {
 
-    const { posts, option, numPages, setOption, setPage } = usePosts()
+    const { posts, option, numPages, setOption, setPage, page } = usePosts()
     const [faves, setFaves] = useState(false)
 
     const handlePageChange = (currentPage: number) => {
@@ -23,6 +23,12 @@ export const PostList = () => {
     const handleOptionChange = (value: string) => {
         setOption(value)
     }
+
+    useEffect(() => {
+        if (page != 1) {
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    }, [posts])
 
     return (
         <div>

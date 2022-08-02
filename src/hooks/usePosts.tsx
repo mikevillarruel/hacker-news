@@ -39,6 +39,7 @@ export const usePosts = () => {
     return {
         posts,
         option,
+        page,
         numPages,
         setOption,
         setPage,
