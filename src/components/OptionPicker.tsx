@@ -1,7 +1,7 @@
 import logoAngular from '../assets/images/angular.png';
 import logoReact from '../assets/images/react.png';
 import logoVue from '../assets/images/vue.png';
-import './OptionPicker.css'
+import './OptionPicker.css';
 
 interface Props {
     onChange: (value: string) => void;
@@ -33,15 +33,24 @@ export const OptionPicker = ({ onChange }: Props) => {
         }
     ]
 
+    const getSelectedFramework = () => {
+        var selecteFramework = localStorage.getItem('selectedFramework') || 'default';
+        if (selecteFramework != 'default') {
+            onChange(selecteFramework);
+        }
+        return selecteFramework;
+    }
+
     return (
         <select
             className='select-framework'
+            defaultValue={getSelectedFramework()}
             onChange={({ target: { value } }) => {
                 localStorage.setItem('selectedFramework', value);
                 onChange(value)
             }}
         >
-            <option selected disabled hidden>
+            <option value='default' selected hidden>
                 Select your news
             </option>
             {options.map((option, index) => (
