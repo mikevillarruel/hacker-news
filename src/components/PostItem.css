@@ -1,0 +1,83 @@
+.post-container {
+    display: flex;
+    width: 48.25%;
+    margin: 15px 0;
+    height: 90px;
+    border-radius: 6px;
+    border: solid 1px rgba(151, 151, 151, 0.8);
+    background-color: #fff;
+}
+
+.post-container:hover {
+    opacity: 0.4;
+}
+
+a:active {
+    opacity: 0.5;
+}
+
+.details-container {
+    padding: 0 16px 0 26px;
+    height: 90px;
+}
+
+.story-title {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: 0.25px;
+    color: #606060;
+}
+
+.post-container a {
+    text-decoration: none;
+    flex-grow: 1;
+    opacity: 0.8;
+}
+
+.hours-ago-by-author {
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #767676;
+}
+
+
+.hours-ago-container {
+    padding-top: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.time-logo {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    object-fit: contain;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .post-container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .post-container {
+        height: 120px;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .post-container {
+        width: 30%;
+    }
+}

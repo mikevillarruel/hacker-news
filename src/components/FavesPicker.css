@@ -1,0 +1,32 @@
+.option-all-faves {
+    width: 98px;
+    height: 31px;
+    border-radius: 2px;
+    border: solid 1px #d6d6d6;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: center;
+    color: #606060;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option-all-faves-active {
+    border: solid 1px #1797ff;
+    color: #1797ff;
+}
+
+.option-all-faves-container {
+    display: flex;
+    height: 164px;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
